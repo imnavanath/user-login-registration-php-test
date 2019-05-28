@@ -1,7 +1,6 @@
 <?php
 
 include('db-connection.php');
-
 $output = '';
 
 if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
