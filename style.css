@@ -248,7 +248,8 @@ input[type=text]:placeholder {
 }
 
 /* Simple CSS3 Fade-in Animation */
-#formFooter .underlineHover {
+#formFooter .underlineHover,
+.underlineHover:hover {
     text-decoration: none;
 }
 

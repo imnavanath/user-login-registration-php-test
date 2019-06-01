@@ -10,7 +10,7 @@ Following points will have grace marks.
 
 1. Create a database titled `login`.
 2. Create table titled `users` in DB, can use following SQL query to create `users` table.
-- `CREATE TABLE users(id int NOT NULL AUTO_INCREMENT, username varchar(255), password varchar(255), PRIMARY KEY(id));`
+- `CREATE TABLE users(id int NOT NULL AUTO_INCREMENT, username varchar(255), email varchar(255), password varchar(255), PRIMARY KEY(id));`
 3. Can update server URL, DB name into `db-connection.php` file.
 4. Run `login.php` file first.
 5. Can use following temporary login details for first time.

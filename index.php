@@ -16,7 +16,7 @@
 		$users_data_result = mysqli_query( $db_connection, $sql_query );
 
 		if ( ( mysqli_num_rows( $users_data_result ) > 0 ) || ( 'admin' == $username && 'admin' == $password ) ) {
-			echo "<script> window.location.href='cms-admin/admin.php'; </script>";
+			echo "<script> window.location.href='cms-admin/'; </script>";
 		} else {
 			echo "<script>window.alert('Invalid Username or Password'); window.location.href='index.php';</script>";
 		}
