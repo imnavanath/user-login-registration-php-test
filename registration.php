@@ -22,7 +22,7 @@
 					<input type="text" class="fadeIn second" id="username" name="username" placeholder="Enter Username" required />
 					<input type="email" class="fadeIn second" id="email" name="email" placeholder="Enter Email" required />
 					<input type="password" class="fadeIn third" id="password" name="password" placeholder="Enter Password" required />
-					<input type="password" class="fadeIn third" id="password-again" name="password-again" placeholder="Confirm Password" required />
+					<input type="password" class="fadeIn third" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required />
 					<input type="submit" class="fadeIn fourth" value="Create User" name="register" id="register" />
 				</form>
 				<div class="check-user"><p>Have Account? <a class="underlineHover" href="login.php">Login Here</a></p></div>
@@ -31,9 +31,9 @@
 				$(document).ready(function() {
 					$('#register').click(function() {
 						var username = $('#username').val();
-						var username = $('#email').val();
+						var email = $('#email').val();
 						var password = $('#password').val();
-						var username = $('#password-again').val();
+						var confirm_password = $('#confirm_password').val();
 
 						$.ajax({
 							url: 'ajax-call.php',
@@ -42,15 +42,14 @@
 								username: username,
 								email: email, 
 								password: password,
-								password: password-again
+								confirm_password: confirm_password
 							},
-
 							success:function(response) {
 								if ( response == 'success' ) {
-									window.alert('User added successfully.');
+									alert('User added successfully.');
 									window.location.href = 'index.php';
 								} else {
-									window.alert('Error ocurred. Please try again.');
+									alert('Error ocurred. Please try again.');
 									window.location.href = 'registration.php';
 								}
 							}
